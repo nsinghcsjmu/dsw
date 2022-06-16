@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="dswns.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My Dsw Office Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+
+</head>
+<body style="background-color:darkgoldenrod">
+    
+    <form runat="server">
+       
+        
+
+        <div class="navbar navbar-inverse navbar-fixed-top" style="left: 0; right: 0; top: 0; height: 106px">
+            <div class="container">
+                <div class="navbar-header">
+                    <asp:Image ID="Image1" runat="server" Height="102px" ImageUrl="~/image/NSILogo.jpg" Width="1519px" />
+                </div>
+                
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&copy; <%: DateTime.Now.Year %> - My DSW Office Application</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
